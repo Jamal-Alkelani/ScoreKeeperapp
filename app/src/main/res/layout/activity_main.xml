@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:orientation="horizontal">
+            <!--- Team A-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/Main_Label_Style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/TeamName1" />
+
+                <TextView
+                    android:id="@+id/ScoreA"
+                    style="@style/Main_Label_vlaue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/TeamScore1" />
+
+                <Button
+
+                    android:id="@+id/addOnePointA"
+                    style="@style/Button_Style"
+                    android:text="+1 Point" />
+
+
+                <Button
+                    android:id="@+id/addTwoPointA"
+                    style="@style/Button_Style"
+                    android:text="+2 Points" />
+
+                <Button
+                    android:id="@+id/addThreePointA"
+                    style="@style/Button_Style"
+                    android:text="+3 Points" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/deepOrangeA700"></LinearLayout>
+            <!--Team B-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/Main_Label_Style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/TeamName2" />
+
+                <TextView
+                    android:id="@+id/ScoreB"
+                    style="@style/Main_Label_vlaue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/TeamScore2" />
+
+                <Button
+                    android:id="@+id/addOnePointB"
+                    style="@style/Button_Style"
+                    android:text="+1 Point" />
+
+                <Button
+                    android:id="@+id/addTwoPointB"
+                    style="@style/Button_Style"
+                    android:text="+2 Points" />
+
+                <Button
+                    android:id="@+id/addThreePointB"
+                    style="@style/Button_Style"
+                    android:text="+3 Points" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="16sp"
+            android:background="@color/deepOrange"
+            android:onClick="resetAll"
+            android:text="reset"
+            android:textSize="24sp" />
+
+
+    </RelativeLayout>
+</ScrollView>
