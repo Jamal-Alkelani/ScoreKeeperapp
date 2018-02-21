@@ -4,4 +4,5 @@
     <string name="TeamName2">Team B</string>
     <string name="TeamScore1">0</string>
     <string name="TeamScore2">0</string>
+    <string name="title_activity_splash_screen">splash_screen</string>
 </resources>

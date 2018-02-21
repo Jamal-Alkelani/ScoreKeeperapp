@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:fillViewport="true">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:src="@drawable/bg"
+            android:scaleType="centerCrop"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -22,7 +27,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:weightSum="1">
 
                 <TextView
                     style="@style/Main_Label_Style"
@@ -35,13 +41,15 @@
                     style="@style/Main_Label_vlaue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/TeamScore1" />
+                    android:text="@string/TeamScore1"
+                    />
 
                 <Button
 
                     android:id="@+id/addOnePointA"
                     style="@style/Button_Style"
                     android:text="+1 Point" />
+
 
 
                 <Button
@@ -113,7 +121,6 @@
             android:layout_centerVertical="true"
             android:layout_marginBottom="16sp"
             android:background="@color/deepOrange"
-            android:onClick="resetAll"
             android:text="reset"
             android:textSize="24sp" />
 

@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initialize();
-        registerListener(addOnePointA,addOnePointB,addTwoPointA,addTowPointB,addThreePointA,addThreePointB);
+        registerListener(addOnePointA,addOnePointB,addTwoPointA,addTowPointB,addThreePointA,addThreePointB,reset);
     }
 
     public void registerListener(Button ... b) {
@@ -41,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
                         resultScoreA+=3;
                     else if(id==addThreePointB.getId())
                         resultScoreB+=3;
+                    else if(id==reset.getId())
+                        resetAll();
                     updateScore();
                 }
             });
@@ -65,9 +67,8 @@ public class MainActivity extends AppCompatActivity {
         scoreB=(TextView) findViewById(R.id.ScoreB);
     }
 
-    public void resetAll(View v){
+    public void resetAll(){
         resultScoreA=resultScoreB=0;
-        updateScore();
         Toast.makeText(this,"Cleared",Toast.LENGTH_SHORT).show();
     }
 
