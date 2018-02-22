@@ -8,13 +8,19 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import javax.xml.datatype.Duration;
-
 public class MainActivity extends AppCompatActivity {
 
-    Button addOnePointA,addOnePointB,addTwoPointA,addTowPointB,addThreePointA,addThreePointB,reset;
-    TextView scoreA,scoreB;
-    int resultScoreA,resultScoreB;
+    Button   addOnePointA;
+    Button   addOnePointB;
+    Button   addTwoPointA;
+    Button   addTowPointB;
+    Button   addThreePointA;
+    Button   addThreePointB;
+    Button   reset;
+    TextView scoreA;
+    TextView scoreB;
+    int resultScoreA;
+    int resultScoreB;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
