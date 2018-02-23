@@ -7,17 +7,26 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+import butterknife.*;
 
 public class MainActivity extends AppCompatActivity {
-
+    @BindView(R.id.addOnePointA)
     Button   addOnePointA;
+    @BindView(R.id.addOnePointB)
     Button   addOnePointB;
+    @BindView(R.id.addTwoPointA)
     Button   addTwoPointA;
+    @BindView(R.id.addTwoPointB)
     Button   addTowPointB;
+    @BindView(R.id.addThreePointA)
     Button   addThreePointA;
+    @BindView(R.id.addThreePointB)
     Button   addThreePointB;
+    @BindView(R.id.reset)
     Button   reset;
+    @BindView(R.id.ScoreA)
     TextView scoreA;
+    @BindView(R.id.ScoreB)
     TextView scoreB;
     int resultScoreA;
     int resultScoreB;
@@ -25,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        initialize();
         registerListener(addOnePointA,addOnePointB,addTwoPointA,addTowPointB,addThreePointA,addThreePointB,reset);
     }
 
@@ -60,18 +68,7 @@ public class MainActivity extends AppCompatActivity {
         scoreA.setText(resultScoreA+"");
         scoreB.setText(resultScoreB+"");
     }
-    private void initialize() {
-        addOnePointA=(Button) findViewById(R.id.addOnePointA);
-        addOnePointB=(Button) findViewById(R.id.addOnePointB);
-        addTwoPointA=(Button) findViewById(R.id.addTwoPointA);
-        addTowPointB=(Button) findViewById(R.id.addTwoPointB);
-        addThreePointA=(Button) findViewById(R.id.addThreePointA);
-        addThreePointB=(Button) findViewById(R.id.addThreePointB);
-        reset=(Button) findViewById(R.id.reset);
 
-        scoreA=(TextView) findViewById(R.id.ScoreA);
-        scoreB=(TextView) findViewById(R.id.ScoreB);
-    }
 
     public void resetAll(){
         resultScoreA=resultScoreB=0;
